@@ -5,4 +5,11 @@ I haven't come across any algorithmic execution tools that can be overlayed onto
 be useful for anyone looking to gain an edge on their execution.
 
 # Getting Started
-TODO: list of programs needed to get started
+TODO: 
+-list of programs needed to get started (download links)
+r, rstudio, sqlite db_browser
+-install any dependencies (rgdax, rtools)
+-how to download repository onto computer
+-update input and database files
+
+Graphical flow chart of files and how everything works along with description
