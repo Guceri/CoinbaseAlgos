@@ -31,6 +31,10 @@ Write additional code here:
 TEST AGAIN
 ```
 
+Checklist of TODO:
+- [ ] first draft of readme
+
+
 Graphical flow chart of files and how everything works along with description
 
 ## Limit Order Algo
