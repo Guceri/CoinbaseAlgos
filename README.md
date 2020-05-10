@@ -17,6 +17,11 @@ Type sample commands in here:
 install.packages('devtools')
 ```
 
+Write additional code here:
+```
+install.packages('rtools')
+```
+
 Graphical flow chart of files and how everything works along with description
 
 ## Limit Order Algo
