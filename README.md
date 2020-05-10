@@ -13,9 +13,9 @@ r, rstudio, sqlite db_browser
 -update input and database files
 
 Type sample commands in here:
-'''
+```
 install.packages('devtools')
-'''
+```
 
 Graphical flow chart of files and how everything works along with description
 
