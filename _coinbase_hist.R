@@ -5,6 +5,7 @@
 #If there is a new symbol, any empty data base must be created first then hardcode "mostRecent"
 #If Coinbase is down, this will stay in loop 
 
+
 #move column 'x' UP by 'n' spaces
 shift <- function(x, n){
   c(x[-(seq(n))], rep(NA, n))
