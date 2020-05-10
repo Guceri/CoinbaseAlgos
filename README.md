@@ -22,6 +22,11 @@ Write additional code here:
 install.packages('rtools')
 ```
 
+Write additional code here:
+```
+install.packages('rgdax')
+```
+
 Graphical flow chart of files and how everything works along with description
 
 ## Limit Order Algo
