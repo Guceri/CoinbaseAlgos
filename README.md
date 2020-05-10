@@ -6,11 +6,11 @@ be useful for anyone looking to gain an edge on their execution.
 
 # Getting Started
 TODO: 
--list of programs needed to get started (download links)
-r, rstudio, sqlite db_browser
--install any dependencies (rgdax, rtools)
--how to download repository onto computer
--update input and database files
+- list of programs needed to get started (download links)
+  - r, rstudio, sqlite db_browser
+- install any dependencies (rgdax, rtools)
+- how to download repository onto computer
+- update input and database files
 
 Type sample commands in here:
 ```
