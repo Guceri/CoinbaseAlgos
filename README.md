@@ -4,6 +4,9 @@ of crypto currency markets on the CoinbasePro exchange.  While there is plenty o
 I haven't come across any algorithmic execution tools that can be overlayed onto existing strategies, so I decided to build some that could 
 be useful for anyone looking to gain an edge on their execution.
 
+
+![](www/images.jfif)
+
 # Getting Started
 TODO: 
 - list of programs needed to get started (download links)
