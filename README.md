@@ -10,6 +10,14 @@ be useful for anyone looking to gain an edge on their execution.
 
 You can download R [here](https://cran.r-project.org/bin/windows/base/)
 
+
+This is how to make a table:
+
+| First Header  | Second Header |
+| ------------- | ------------- |
+| Content Cell  | Content Cell  |
+| Content Cell  | Content Cell  |
+
 # Getting Started
 TODO: 
 - list of programs needed to get started (download links)
