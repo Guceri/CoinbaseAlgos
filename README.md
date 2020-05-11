@@ -11,12 +11,12 @@ be useful for anyone looking to gain an edge on their execution.
 You can download R [here](https://cran.r-project.org/bin/windows/base/)
 
 
-This is how to make a table:
+This is how to make a table. You can vary the width and it will auto adjust:
 
-| First Header  | Second Header |
-| ------------- | ------------- |
-| Content Cell  | Content Cell  |
-| Content Cell  | Content Cell  |
+| Command | Description |
+| --- | --- |
+| git status | List all new or modified files |
+| git diff | Show file differences that haven't been staged |
 
 # Getting Started
 TODO: 
