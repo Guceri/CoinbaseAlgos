@@ -43,7 +43,7 @@ Checklist of TODO:
 
 Graphical flow chart of files and how everything works along with description
 
-## Limit Order Algo
+## [Limit Order Algo](_limitorderalgo.R)
   The limit order algo allows you to be best bid/offer by updating your limit price anytime the market moves away from your current limit price.  Large orders can be broken down into smaller "slices" so that your resting order is not so large that it would look obvious.  In future installations, I will include a randomizer to the slices so that they are not constantly the same size. 
   
 ## Gamma Order Algo
