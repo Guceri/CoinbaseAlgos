@@ -2,7 +2,7 @@
 
   This is a dashboard written in R, using the Shiny interface to execute common tasks needed for execution and data management
 of crypto currency markets on the CoinbasePro exchange.  While there is plenty of excellent backtesting, and charting programs available,
-I haven't come across any algorithmic execution tools that can be overlayed onto existing strategies and incorporate data science centric design, so I decided to build something that could be useful for anyone looking to gain an edge on their execution.  This was built on a windows 10 computer, but have used this on a mac in the past.  Instructions are based on a Windows 10 installation.
+I haven't come across any algorithmic execution tools that can be overlayed onto existing strategies and incorporate data science centric design, so I decided to build something that could be useful for anyone looking to gain an edge on their execution.  This was built on a windows 10 computer, but have used this on a mac in the past.  Instructions are based on a Windows 10 installation. This dashboard has no affiliation with Coinbase Pro and is an independant project with no warranties. Please use at your own risk. 
 
 <p align="center">
   <img width="500" height="200" src="www/coinbase_pro_logo.png">
@@ -10,15 +10,13 @@ I haven't come across any algorithmic execution tools that can be overlayed onto
 
 ## Getting Started
 
-Programs to install
+Programs to install:
 - You can download the latest R [here](https://cran.r-project.org/bin/windows/base/)
 - You can download RStudio [here](https://rstudio.com/products/rstudio/download/)
 - SQLite Data browser [here](https://sqlitebrowser.org/dl/)
 - Signup for Pusbullet [here](https://www.pushbullet.com/) and get the phone app and/or browser extension to be notified of trades
 
-Once everything is installed, launch R Studio.
-
-download the github repository using the following lines of code in the Rstudio console:
+Launch RStudio and type the following in your console to download the repository: 
 ```
 install.packages('devtools')
 library(devtools)
