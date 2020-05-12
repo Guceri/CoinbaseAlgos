@@ -22,7 +22,7 @@ source("_inputs.R")
 source("_busy_indicator.R")
 source("_proxyclick.R")
 source("_automation.R")
-source("_gdax.R")
+source("_coinbase.R")
 
 #######################################################################################################################
                                                    #USER INTERFACE#
