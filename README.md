@@ -7,6 +7,8 @@ be useful for anyone looking to gain an edge on their execution.
 
 ![](www/images.jfif)
 
+![](www/Work Flow Diagram.png)
+
 
 You can download R [here](https://cran.r-project.org/bin/windows/base/)
 
