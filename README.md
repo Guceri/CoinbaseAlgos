@@ -38,6 +38,12 @@ Below is a flow chart of the current set up.  This is likely to change over time
 
 ![](www/programflowchart.png)
 
+
+## Dashboard
+The dashboard should look like the below image.  It can be viewed in the Viewer pane of R Studio or an be a seperate window based on your settings.
+
+![](www/dashboard.png)
+
 ## [Limit Order Algo](_limitorderalgo.R)
   The limit order algo allows you to be best bid/offer by updating your limit price anytime the market moves away from your current limit price.  Large orders can be broken down into smaller "slices" so that your resting order is not so large that it would look obvious.  In future installations, I will include a randomizer to the slices so that they are not constantly the same size. 
   
