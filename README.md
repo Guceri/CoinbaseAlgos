@@ -1,12 +1,12 @@
 # CoinbasePro Execution Dashboard
 
-<p align="center">
-  <img width="600" height="200" src="www/coinbase_pro_logo.png">
-</p>
-
   This is a dashboard written in R, using the Shiny interface to execute common tasks needed for execution and data management
 of crypto currency markets on the CoinbasePro exchange.  While there is plenty of excellent backtesting, and charting programs available,
 I haven't come across any algorithmic execution tools that can be overlayed onto existing strategies and incorporate data science centric design, so I decided to build something that could be useful for anyone looking to gain an edge on their execution.  This was built on a windows 10 computer, but have used this on a mac in the past.  Instructions are based on a Windows 10 installation.
+
+<p align="center">
+  <img width="500" height="200" src="www/coinbase_pro_logo.png">
+</p>
 
 ## Getting Started
 
