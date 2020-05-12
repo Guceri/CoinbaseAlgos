@@ -3,7 +3,7 @@
 of crypto currency markets on the CoinbasePro exchange.  While there is plenty of excellent backtesting, and charting programs available,
 I haven't come across any algorithmic execution tools that can be overlayed onto existing strategies and incorporate data science centric design, so I decided to build something that could be useful for anyone looking to gain an edge on their execution.  This was built on a windows 10 computer, but have used this on a mac in the past.  Instructions are based on a Windows 10 installation.
 
-# Getting Started
+## Getting Started
 
 Programs to install
 - You can download the latest R [here](https://cran.r-project.org/bin/windows/base/)
@@ -24,7 +24,7 @@ Take "_sample" off the end of the input R file and coinbase_.01 database
 Input API credentials for both CoinbasePro and PushBullet
 
 
-# TODO
+## TODO
   Ideally, the vision is to turn this into a suite of tools that can be used for strategy development and easy plug n play with other programs that may have functionality that doesn't need to be rebuilt.  Bridging the gap between programs and leveraging R's data science capabilities is the general idea. Please feel free to provide feedback and thoughts on what you think could be useful.
   
 - [ ] Finish README.md with installation instructions and overview
@@ -33,7 +33,9 @@ Input API credentials for both CoinbasePro and PushBullet
 - [ ] Work on incorporating Machine Learning Techniques to develop strategy ideas
   
 
-  Below is a flow chart of the current set up.  This is likely to change over time and I will try and update it as I go along, but this should give a general structure to how things are set up. 
+
+## Flow Chart
+Below is a flow chart of the current set up.  This is likely to change over time and I will try and update it as I go along, but this should give a general structure to how things are set up. 
 
 ![](www/programflowchart.png)
 
