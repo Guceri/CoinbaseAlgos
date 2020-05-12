@@ -8,35 +8,31 @@
 of crypto currency markets on the CoinbasePro exchange.  While there is plenty of excellent backtesting, and charting programs available,
 I haven't come across any algorithmic execution tools that can be overlayed onto existing strategies and incorporate data science centric design, so I decided to build something that could be useful for anyone looking to gain an edge on their execution.  This was built on a windows 10 computer, but have used this on a mac in the past.  Instructions are based on a Windows 10 installation. This dashboard has no affiliation with Coinbase Pro and is an independant project with no warranties. Please use at your own risk. 
 
+
 ## Getting Started
 
-Programs to install:
+Programs to download:
 - You can download the latest R [here](https://cran.r-project.org/bin/windows/base/)
 - You can download RStudio [here](https://rstudio.com/products/rstudio/download/)
 - SQLite Data browser [here](https://sqlitebrowser.org/dl/)
 - Signup for Pusbullet [here](https://www.pushbullet.com/) and get the phone app and/or browser extension to be notified of trades
 
-Launch RStudio and type the following in your console to download the repository: 
-```
-install.packages('devtools')
-library(devtools)
-install_github("Guceri/CoinbasePro-Execution-Shiny-R")
-```
+Installation instructions:
+1. Clone repository and install unzipped folder with Documents (or where you like)
+2. Rename the input file and the database to exclude the phrase "_sample"
+3. Open the _input.R file and update the API keys for Coinbase Pro and also PushBullet
+4. Launch app.R file in Rstudio and run app
 
-Take "_sample" off the end of the input R file and coinbase_.01 database
-Input API credentials for both CoinbasePro and PushBullet
-
+If there are any issues, please let me know.  The instructions are not exhaustive and not meant for complete beginners. 
 
 ## TODO
   Ideally, the vision is to turn this into a suite of tools that can be used for strategy development and easy plug n play with other programs that may have functionality that doesn't need to be rebuilt.  Bridging the gap between programs and leveraging R's data science capabilities is the general idea. Please feel free to provide feedback and thoughts on what you think could be useful.
   
-- [ ] Finish README.md with installation instructions and overview
+- [X] Finish README.md with installation instructions and overview
 - [ ] Optionality for csv file creation or not on historical download
 - [ ] Work on incorporating a "strategy" file to incoporate addtional functionality for automated trading (ie. technical analysis)
 - [ ] Work on incorporating Machine Learning Techniques to develop strategy ideas
   
-
-
 ## Flow Chart
 Below is a flow chart of the current set up.  This is likely to change over time and I will try and update it as I go along, but this should give a general structure to how things are set up. 
 
