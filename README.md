@@ -19,7 +19,7 @@ Programs to download:
 
 Installation instructions:
 1. Clone repository and install unzipped folder with Documents (or where you like)
-2. Rename the input file and the database to exclude the phrase "_sample"
+2. Rename the _input file and the database (data/coinbase_0.1) to exclude the phrase "_sample"
 3. Open the _input.R file and update the API keys for Coinbase Pro and also PushBullet
 4. Launch app.R file in Rstudio and run app
 
