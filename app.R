@@ -66,7 +66,8 @@ ui <- fluidPage(
             selectInput(inputId = "algo_type","Order Type",c("limit","market")),
             textInput(inputId = "buffer","$ buffer","1"),
             textInput(inputId = "buy_power","Min. Buying Power","10"),
-
+            textInput(inputId = "max_price","Max Buy Price","9200"),
+            
             #used flowLayout to align buttons horizontally
             flowLayout(
               #disable start button when script is running
@@ -182,6 +183,7 @@ server <- function(input, output) {
       order_type<<-input$algo_type
       buffer<<-as.numeric(input$buffer)
       cash_available <<- as.numeric(input$buy_power)
+      price_limit <<- as.numeric(input$max_price)
     })
     
     #Block initial shiny app start up

@@ -30,6 +30,8 @@ If there are any issues, please let me know.  The instructions are not exhaustiv
   
 - [X] Finish README.md with installation instructions and overview
 - [ ] Optionality for csv file creation or not on historical download
+- [X] Max price input for gamma algo
+- [ ] Incorporate websocket for market maker
 - [ ] Work on incorporating a "strategy" file to incoporate addtional functionality for automated trading (ie. technical analysis)
 - [ ] Work on incorporating Machine Learning Techniques to develop strategy ideas
   

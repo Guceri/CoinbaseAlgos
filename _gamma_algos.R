@@ -32,7 +32,7 @@ gamma <- function () {
     }
     
     #execution Logic
-    if (buying_power >= cash_available){
+    if (buying_power >= cash_available & price_limit > ask_price()){
       
       # notify that an order is being sent
       if(Pushbullet){
