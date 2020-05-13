@@ -50,7 +50,6 @@ ui <- fluidPage(
        textInput(inputId = "quantity","Quantity",""),
         'data-proxy-click' = "submit"
      ),
-     checkboxInput("postOnly","Post Only",FALSE),
      withBusyIndicatorUI(
         actionButton("submit","Submit Order",class = "btn-primary")
       ),
@@ -66,6 +65,7 @@ ui <- fluidPage(
             selectInput(inputId = "algo_type","Order Type",c("limit","market")),
             textInput(inputId = "buffer","$ buffer","1"),
             textInput(inputId = "buy_power","Min. Buying Power","10"),
+            textInput(inputId = "max_slippage","Max Order Slippage","10"),
             textInput(inputId = "max_price","Max Buy Price","9200"),
             
             #used flowLayout to align buttons horizontally
@@ -138,7 +138,6 @@ server <- function(input, output) {
       order_size_original <<- as.numeric(input$quantity)
       #save # of orders rounded down if fractional
       orders <<- floor(as.numeric(input$splices))
-      postonly <<- input$postOnly
       #The proxy click bypassed the disable of the submit button so we need to check again and do nothing if the values are not proper
       if (is.null(input$quantity) || input$quantity == "" || input$quantity == 0 || is.na(as.numeric(input$quantity)) ||
           is.null(input$splices) || input$splices == "" || input$splices == 0 || is.na(as.numeric(input$splices)) 
@@ -184,6 +183,7 @@ server <- function(input, output) {
       buffer<<-as.numeric(input$buffer)
       cash_available <<- as.numeric(input$buy_power)
       price_limit <<- as.numeric(input$max_price)
+      max_slippage <<- as.numeric(input$max_slippage)
     })
     
     #Block initial shiny app start up

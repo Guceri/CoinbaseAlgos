@@ -74,7 +74,7 @@ gamma_limit_algo <- function(){
           attempt <<- attempt + 1
           #Send order, if it fails, mute the response
           tryCatch(add_order(product_id = pair, api.key = my_api.key, secret = my_secret, passphrase = my_passphrase,
-                             type = "limit", price = bid_price(), side = "b", size = order_size, post_only = TRUE),error = function(e){return(
+                             type = "limit", price = bid_price(), side = "b", size = order_size),error = function(e){return(
                                cat('Something went wrong...\n')
                              )})
           
@@ -155,7 +155,7 @@ gamma_market_algo <- function(){
     
     #Send order, if it fails, mute the response
     tryCatch(add_order(product_id = pair, api.key = my_api.key, secret = my_secret, passphrase = my_passphrase,
-                       type = "market", side = "b", size = order_size),error = function(e){return(
+                       type = "limit", side = "b", price = ask_price()+max_slippage, size = order_size),error = function(e){return(
                          cat('Something went wrong...\n'))})
     Sys.sleep(1)              
     if (attempt == 3){

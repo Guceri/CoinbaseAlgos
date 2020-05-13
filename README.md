@@ -61,7 +61,6 @@ The dashboard should look like the below image.  It can be viewed in the Viewer 
 | Side | Direction of trade |
 | # of Orders | Total # of orders you would like to send |
 | Quantity | The size of each order |
-| Post Only | If you only want to trade limit orders or not |
   
 ## [Gamma Order Algo](_gamma_algos.R)
   Since CoinbasePro has included the ability to leverage BTC trading, I created a "Gamma" algo which keeps track of your buying power and buys additional BTC as price moves up and buying power is made available.  This allows to have a convex potential exposure to BTC which is similar to the effects of Gamma in an options position.  Future installations will create more functionality for limiting how this is used and providing more flexibility for dealing with margin calls and potential exit targets. 
@@ -72,7 +71,8 @@ The dashboard should look like the below image.  It can be viewed in the Viewer 
 | Order Type | Specify order type |
 | $ buffer | Amount subtracted from true buying power |
 | Min. Buying Power | Total Buying Power needed to trigger a trade |
-
+| Max Order Slippage | Max slippage allowed on market orders |
+| Max Price | Price at which algo stops buying |
 
 ## [Market Makeer Algo](_automation.R)
   This is an algo that allows you to quote two sided markets at specified widths along with various built in bias which look at the order book as well as current available position/funds.  This is NOT a low latency market maker and is not recommended on liquid pairs that are commonly arbitraged among exchanges (ie. BTC, ETH, LTC) with low latency design structures.  When coinbase pro was GDAX, limit orders were free, and there was an appeal to trade limit orders to catch sloppy market orders.  This has since changed.  This may still be useful on less liquid alt's however.  A low latency design will be looked at for further development if time permits.  Once a position gets close to specified position limits, a bias can be introduced on sizing. If position limits are breached, then the algo will reduce or increase position using the limit order algo to readjust core position to within the min/max limits.  See code for details.
