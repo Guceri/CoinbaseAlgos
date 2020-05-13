@@ -47,8 +47,10 @@ gamma <- function () {
       }
       
     }
+    
+    cat(paste('Buying Power: ',buying_power,'\n'))
   }
-  cat(paste('Buying Power: ',buying_power,'\n'))
+  
   cat(paste(Sys.time(),'\n'))
 }
 
