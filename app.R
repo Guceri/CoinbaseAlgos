@@ -65,7 +65,7 @@ ui <- fluidPage(
             selectInput(inputId = "algo_type","Order Type",c("limit","market")),
             textInput(inputId = "buffer","$ buffer","1"),
             textInput(inputId = "buy_power","Min. Buying Power","10"),
-            textInput(inputId = "max_slippage","Max Order Slippage","10"),
+            textInput(inputId = "max_slippage","Max Market Order Slippage","10"),
             textInput(inputId = "max_price","Max Buy Price","9200"),
             
             #used flowLayout to align buttons horizontally

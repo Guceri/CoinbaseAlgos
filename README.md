@@ -63,7 +63,7 @@ The dashboard should look like the below image.  It can be viewed in the Viewer 
 | Quantity | The size of each order |
   
 ## [Gamma Order Algo](_gamma_algos.R)
-  Since CoinbasePro has included the ability to leverage BTC trading, I created a "Gamma" algo which keeps track of your buying power and buys additional BTC as price moves up and buying power is made available.  This allows to have a convex potential exposure to BTC which is similar to the effects of Gamma in an options position.  Future installations will create more functionality for limiting how this is used and providing more flexibility for dealing with margin calls and potential exit targets. 
+  Since CoinbasePro has included the ability to leverage BTC trading, I created a "Gamma" algo which keeps track of your buying power and buys additional BTC as price moves up and buying power is made available.  This allows to have a convex potential exposure to BTC which is similar to the effects of Gamma in an options position. Please note that market orders are actually just limit orders with a max slippage input. Future installations will create more functionality for limiting how this is used and providing more flexibility for dealing with margin calls and potential exit targets. 
   
 | Command | Description |
 | --- | --- |
@@ -71,7 +71,7 @@ The dashboard should look like the below image.  It can be viewed in the Viewer 
 | Order Type | Specify order type |
 | $ buffer | Amount subtracted from true buying power |
 | Min. Buying Power | Total Buying Power needed to trigger a trade |
-| Max Order Slippage | Max slippage allowed on market orders |
+| Max Market Order Slippage | Max slippage allowed on "market"" orders |
 | Max Price | Price at which algo stops buying |
 
 ## [Market Makeer Algo](_automation.R)
