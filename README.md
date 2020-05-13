@@ -71,7 +71,7 @@ The dashboard should look like the below image.  It can be viewed in the Viewer 
 | Order Type | Specify order type |
 | $ buffer | Amount subtracted from true buying power |
 | Min. Buying Power | Total Buying Power needed to trigger a trade |
-| Max Market Order Slippage | Max slippage allowed on "market"" orders |
+| Max Market Order Slippage | Max slippage allowed on "market" orders |
 | Max Price | Price at which algo stops buying |
 
 ## [Market Makeer Algo](_automation.R)
