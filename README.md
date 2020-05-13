@@ -21,7 +21,13 @@ Installation instructions:
 1. Clone repository and install unzipped folder with Documents (or where you like)
 2. Rename the _input file and the database (data/coinbase_0.1) to exclude the phrase "_sample"
 3. Open the _input.R file and update the API keys for Coinbase Pro and also PushBullet
-4. Launch app.R file in Rstudio and run app
+4. Install rgdax package using the following code in R console of Rstudio
+```
+install.packages('devtools')
+library(devtools)
+install_github("Guceri/rgdax", ref = "dev")
+```
+5. Launch app.R file in Rstudio and run app
 
 If there are any issues, please let me know.  The instructions are not exhaustive and not meant for complete beginners. 
 

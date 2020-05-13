@@ -26,9 +26,9 @@ gamma <- function () {
     
     #calculate buying power
     if ((equity*3)-iposition-buffer <= 0){
-      buying_power = 0
+      buying_power <<- 0
     }else{
-      buying_power <- round((equity*3)-iposition,2)-buffer
+      buying_power <<- round((equity*3)-iposition,2)-buffer
     }
     
     #execution Logic
