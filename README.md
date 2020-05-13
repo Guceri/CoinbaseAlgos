@@ -21,7 +21,7 @@ Installation instructions:
 1. Clone repository and install unzipped folder with Documents (or where you like)
 2. Rename the _input file and the database (data/coinbase_0.1) to exclude the phrase "_sample"
 3. Open the _input.R file and update the API keys for Coinbase Pro and also PushBullet
-4. Install rgdax package using the following code in R console of Rstudio
+4. Install rgdax package using the following code in R console of Rstudio 
 ```
 install.packages('devtools')
 library(devtools)
@@ -33,10 +33,17 @@ If there are any issues, please let me know.  The instructions are not exhaustiv
 
 ## TODO
   Ideally, the vision is to turn this into a suite of tools that can be used for strategy development and easy plug n play with other programs that may have functionality that doesn't need to be rebuilt.  Bridging the gap between programs and leveraging R's data science capabilities is the general idea. Please feel free to provide feedback and thoughts on what you think could be useful.
-  
+
 - [X] Finish README.md with installation instructions and overview
 - [ ] Optionality for csv file creation or not on historical download
 - [X] Max price input for gamma algo
+- [ ] Stop/Restart gamma algo does not print "gamma algo has started"
+- [ ] Immediate limit order fills print "something went wrong"
+
+
+## Vision
+  The idea will ulitmately be to make this dashboard low(ish) latency and to incorporate more data science features. Currently the need for these items are not priority at the moment and will likely come at a later time.
+  
 - [ ] Incorporate websocket for market maker
 - [ ] Work on incorporating a "strategy" file to incoporate addtional functionality for automated trading (ie. technical analysis)
 - [ ] Work on incorporating Machine Learning Techniques to develop strategy ideas
