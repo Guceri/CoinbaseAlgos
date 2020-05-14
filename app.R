@@ -65,8 +65,8 @@ ui <- fluidPage(
             selectInput(inputId = "algo_type","Order Type",c("limit","market")),
             textInput(inputId = "buffer","$ buffer","1"),
             textInput(inputId = "buy_power","Min. Buying Power","10"),
-            textInput(inputId = "max_slippage","Max Market Order Slippage","10"),
-            textInput(inputId = "max_price","Max Buy Price","9200"),
+            textInput(inputId = "max_slippage","Max Market Order Slippage","2"),
+            textInput(inputId = "max_price","Max Buy Price","10000"),
             
             #used flowLayout to align buttons horizontally
             flowLayout(
@@ -210,7 +210,7 @@ server <- function(input, output) {
       shinyjs::disable("gamma_end")
       cat("Gamma Algo has ended...\n")
       #Reset booleans 
-      initial_mm<<- TRUE
+      initial_gamma<<- TRUE
       
     }
   })

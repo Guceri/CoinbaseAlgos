@@ -37,8 +37,9 @@ If there are any issues, please let me know.  The instructions are not exhaustiv
 - [X] Finish README.md with installation instructions and overview
 - [ ] Optionality for csv file creation or not on historical download
 - [X] Max price input for gamma algo
-- [ ] Stop/Restart gamma algo does not print "gamma algo has started"
+- [X] Stop/Restart gamma algo does not print "gamma algo has started"
 - [ ] Immediate limit order fills print "something went wrong"
+- [X] "Market" orders on gamma algo need to be more robust because buying power is slow to update on coinbases api
 
 
 ## Vision

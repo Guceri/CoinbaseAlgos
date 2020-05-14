@@ -31,6 +31,8 @@ gamma <- function () {
       buying_power <<- round((equity*3)-iposition,2)-buffer
     }
     
+    cat(paste('Buying Power: ',buying_power,'\n'))
+    
     #execution Logic
     if (buying_power >= cash_available & price_limit > ask_price()){
       
@@ -47,8 +49,7 @@ gamma <- function () {
       }
       
     }
-    
-    cat(paste('Buying Power: ',buying_power,'\n'))
+
   }
   
   cat(paste(Sys.time(),'\n'))
@@ -146,21 +147,35 @@ gamma_market_algo <- function(){
   cat('Sending market BUY Order...\n')
   
   attempt <<- 0
+  done <<- FALSE
   
-  while(attempt <= 2){
+  while(attempt <= 2 && !(done) ){
     
     attempt <<- attempt + 1
     
-    order_size <<- floor(buying_power/ask_price()*1000000)/1000000
+    market_error <<- FALSE
+    
+    order_size <<- floor(buying_power/(ask_price()+max_slippage)*1000000)/1000000
     
     #Send order, if it fails, mute the response
     tryCatch(add_order(product_id = pair, api.key = my_api.key, secret = my_secret, passphrase = my_passphrase,
                        type = "limit", side = "b", price = ask_price()+max_slippage, size = order_size),error = function(e){return(
-                         cat('Something went wrong...\n'))})
-    Sys.sleep(1)              
+                         cat('Something went wrong...\n'))
+                         market_error <<- TRUE})
+    
+    if (no_orders() && !(market_error)){ 
+      cat('BUY Order Filled...\n')
+      done <<- TRUE
+    }else
+    if (!no_orders()){
+      cat('Resting Order Present!...\n')
+      cancel_orders()
+      done <<- TRUE
+    }
+    
     if (attempt == 3){
       cat('Max attempts tried...\n')
     }
-    
+  
   }
 }
