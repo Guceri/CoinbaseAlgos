@@ -1,5 +1,7 @@
 
 gamma <- function () {
+  #pull needed data for calcuations
+  
   tryCatch(usd <<- round(curr_bal_usd(),2),
            error = function(e){
              usd <<- numeric(0)
@@ -8,10 +10,15 @@ gamma <- function () {
   tryCatch(iposition <<- round(last_price()*curr_bal(),2),
            error = function(e){
              iposition <<- numeric(0)
-           })      
+           }) 
+  
+  tryCatch(current_price <- ask_price(),
+           error = function(e){
+             current_price <<- numeric(0)
+           })
   
   #Sometimes iposition or usd come back black causing a null value
-  if (is.empty(usd) || is.empty(iposition)){
+  if (is.empty(usd) || is.empty(iposition) || is.empty(current_price)){
     cat('Had trouble pulling account values, trying again...\n')
   }else{
     #USD + iposition
@@ -34,7 +41,7 @@ gamma <- function () {
     cat(paste('Buying Power: ',buying_power,'\n'))
     
     #execution Logic
-    if (buying_power >= cash_available & price_limit > ask_price()){
+    if (buying_power >= cash_available & price_limit > current_price){
       
       # notify that an order is being sent
       if(Pushbullet){
