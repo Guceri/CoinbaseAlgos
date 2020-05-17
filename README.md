@@ -40,6 +40,7 @@ If there are any issues, please let me know.  The instructions are not exhaustiv
 - [X] Stop/Restart gamma algo does not print "gamma algo has started"
 - [ ] Immediate limit order fills print "something went wrong"
 - [X] "Market" orders on gamma algo need to be more robust because buying power is slow to update on coinbases api
+- [x] Create option on limit order to trade out of full position or buy full position
 
 
 ## Vision
