@@ -83,7 +83,7 @@ The dashboard should look like the below image.  It can be viewed in the Viewer 
 | Max Market Order Slippage | Max slippage allowed on "market" orders |
 | Max Price | Price at which algo stops buying |
 
-## [Market Makeer Algo](_automation.R)
+## [Market Maker Algo](_automation.R)
   This is an algo that allows you to quote two sided markets at specified widths along with various built in bias which look at the order book as well as current available position/funds.  This is NOT a low latency market maker and is not recommended on liquid pairs that are commonly arbitraged among exchanges (ie. BTC, ETH, LTC) with low latency design structures.  When coinbase pro was GDAX, limit orders were free, and there was an appeal to trade limit orders to catch sloppy market orders.  This has since changed.  This may still be useful on less liquid alt's however.  A low latency design will be looked at for further development if time permits.  Once a position gets close to specified position limits, a bias can be introduced on sizing. If position limits are breached, then the algo will reduce or increase position using the limit order algo to readjust core position to within the min/max limits.  See code for details.
   
 | Command | Description |
